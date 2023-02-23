@@ -1,8 +1,10 @@
 #!/bin/bash
 
+echo "Cloning haystack-tutorials..."
 rm -rf haystack-tutorials
-git clone --filter=tree:0 https://github.com/deepset-ai/haystack-tutorials.git
+git clone https://github.com/deepset-ai/haystack-tutorials.git
 echo "Copying markdown files into ./content/tutorials..."
+echo > git log -1
 cp ./haystack-tutorials/markdowns/* ./content/tutorials
 ls ./content/tutorials
 mkdir ./static/downloads
