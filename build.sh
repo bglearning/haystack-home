@@ -3,11 +3,11 @@
 rm -rf haystack-tutorials
 git clone --depth 1 --branch implement-last-commit-new https://github.com/deepset-ai/haystack-tutorials.git 
 
-python --version
+python3 --version
 echo "Install requirements for haystack-tutorials..."
-pip install -r haystack-tutorials/requirements.txt
+pip3 install -r haystack-tutorials/requirements.txt
 echo "Generating markdown files into ./content/tutorials..."
-python haystack-tutorials/scripts/generate_markdowns.py --index haystack-tutorials/index.toml --notebooks all --output ./content/tutorials
+python3 haystack-tutorials/scripts/generate_markdowns.py --index haystack-tutorials/index.toml --notebooks all --output ./content/tutorials
 echo "Copying markdown files into ./content/tutorials..."
 ls ./content/tutorials
 mkdir ./static/downloads
