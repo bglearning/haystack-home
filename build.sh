@@ -5,10 +5,12 @@ git clone --depth 1 --branch implement-last-commit-new https://github.com/deepse
 
 python3 --version
 echo "Install requirements for haystack-tutorials..."
-pip3 install -r haystack-tutorials/requirements.txt
+cd haystack-tutorials
+pip3 install -r requirements.txt
 echo "Generating markdown files into ./content/tutorials..."
-python3 haystack-tutorials/scripts/generate_markdowns.py --index haystack-tutorials/index.toml --notebooks all --output ./content/tutorials
+python3 scripts/generate_markdowns.py --index index.toml --notebooks all --output ../content/tutorials
 echo "Copying markdown files into ./content/tutorials..."
+cd ..
 ls ./content/tutorials
 mkdir ./static/downloads
 echo "Copying notebook files into ./static/downloads..."
