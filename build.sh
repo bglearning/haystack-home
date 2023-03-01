@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm -rf haystack-tutorials
-git clone --depth 1 --branch implement-last-commit-new https://github.com/deepset-ai/haystack-tutorials.git 
+git clone --filter=tree:0 --branch implement-last-commit-new https://github.com/deepset-ai/haystack-tutorials.git 
 
 python3 --version
 echo "Install requirements for haystack-tutorials..."
